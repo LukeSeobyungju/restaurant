@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
 
 
-export default function Test(){
+export default function Category(){
     const category=useLocation();
     const [list,setList]=useState([]);
     const API="https://6728190f270bd0b97554559c.mockapi.io/my_data/restaurant";
@@ -13,7 +13,7 @@ export default function Test(){
             setList(response.data);
         })
         .catch((error)=>{
-            alert(error);
+            console.log(error);
         })
     }
     useEffect(()=>{
