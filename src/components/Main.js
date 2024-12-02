@@ -11,7 +11,8 @@ export default function Main(){
     return(
         <>
             <div>
-                <img src="into2.png" id="logo"></img>
+                <img src="into2_nb.png" id="logo"></img>
+                <img src="into2_name.png" id="logo2"></img>
                 <input type="text" id="search" onChange={onchange}/>
                 <button><Link to='/search' state={value}>검색</Link></button>
             </div>
