@@ -17,12 +17,12 @@ export default function Main(){
     return(
         <>
 
-                <Row>
-                    <Col xs={4}>
+                <Row id="headerBar">
+                    <Col xs={5}>
                         <img src="into2_nb.png" id="logo" alt="logo"></img>
                         <img src="into2_name.png" id="logo2" alt="logo"></img>
                     </Col>
-                    <Col xs={6} id="searchBox">
+                    <Col xs={7} id="searchBox">
                         <InputGroup className="mb-3">
                             <Form.Control onChange={onchange}/>
                             <Button variant="outline-secondary" id="button-addon2">
@@ -31,6 +31,7 @@ export default function Main(){
                         </InputGroup>
                     </Col>
                 </Row>
+                <Row id="back"></Row>
                 <Row id="menuBar">
                     <Col>
                         <button><Link to='/category' state={"물회"}>물회</Link></button>
