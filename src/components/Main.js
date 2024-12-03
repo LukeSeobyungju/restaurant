@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import Card from 'react-bootstrap/Card';
 
 export default function Main(){
     
@@ -16,6 +17,7 @@ export default function Main(){
     return(
         <>
             <div>
+                <Row></Row>
                 <Row>
                     <Col xs={4}>
                         <img src="into2_nb.png" id="logo" alt="logo"></img>
@@ -54,7 +56,74 @@ export default function Main(){
 
                 </Row>
                 <Row>
-
+                    <Col xs={10}>
+                        <Card>
+                            <Card.Header>#물회</Card.Header>
+                            <Card.Body>
+                                <Card.Title>Special title treatment</Card.Title>
+                                <Card.Text>
+                                With supporting text below as a natural lead-in to additional content.
+                                </Card.Text>
+                                <Button variant="primary">자세히 보기</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={10}>
+                        <Card>
+                            <Card.Header>#물회</Card.Header>
+                            <Card.Body>
+                                <Card.Title>Special title treatment</Card.Title>
+                                <Card.Text>
+                                With supporting text below as a natural lead-in to additional content.
+                                </Card.Text>
+                                <Button variant="primary">자세히 보기</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={10}>
+                        <Card>
+                            <Card.Header>#물회</Card.Header>
+                            <Card.Body>
+                                <Card.Title>Special title treatment</Card.Title>
+                                <Card.Text>
+                                With supporting text below as a natural lead-in to additional content.
+                                </Card.Text>
+                                <Button variant="primary">자세히 보기</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={10}>
+                        <Card>
+                            <Card.Header>#물회</Card.Header>
+                            <Card.Body>
+                                <Card.Title>Special title treatment</Card.Title>
+                                <Card.Text>
+                                With supporting text below as a natural lead-in to additional content.
+                                </Card.Text>
+                                <Button variant="primary">자세히 보기</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={10}>
+                        <Card>
+                            <Card.Header>#물회</Card.Header>
+                            <Card.Body>
+                                <Card.Title>Special title treatment</Card.Title>
+                                <Card.Text>
+                                With supporting text below as a natural lead-in to additional content.
+                                </Card.Text>
+                                <Button variant="primary">자세히 보기</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
                 </Row>
             </div>  
             
