@@ -1,14 +1,22 @@
 #logo{
-    /* position: fixed; */
+    position:fixed;
     margin-left:200px;
     width:100px;
 }
 #logo2{
-    /* position: fixed; */
-    margin-bottom:20px;
+    position:fixed;
+    margin-left:300px;
+    margin-top:23px;
     height:60px;
     width:150px;
 }
+#searchBox{
+    position:fixed;
+    margin-left:500px;
+    margin-top:32px;
+}
 #menuBar{
+    margin-top:100px;
     background-color: lightgray;
+    height:40px;
 }
