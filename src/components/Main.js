@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Card from 'react-bootstrap/Card';
+import {FaSearch} from "react-icons/fa";
 
 export default function Main(){
     
@@ -18,15 +19,17 @@ export default function Main(){
         <>
 
                 <Row id="headerBar">
-                    <Col xs={5}>
-                        <img src="into2_nb.png" id="logo" alt="logo"></img>
-                        <img src="into2_name.png" id="logo2" alt="logo"></img>
+                    <Col id="logos" xs={4}>
+                        <div class="top">
+                            <img src="into2_nb.png" id="logo" alt="logo"></img>
+                            <img src="into2_name.png" id="logo2" alt="logo"></img>
+                        </div>
                     </Col>
-                    <Col xs={7} id="searchBox">
+                    <Col xs={8} id="searchBox">
                         <InputGroup className="mb-3">
                             <Form.Control onChange={onchange}/>
                             <Button variant="outline-secondary" id="button-addon2">
-                                <Link to='/search' state={value}>검색</Link>
+                                <Link to='/search' state={value}><FaSearch/></Link>
                             </Button>
                         </InputGroup>
                     </Col>
