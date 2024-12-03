@@ -1,11 +1,14 @@
 #logo{
-    position: fixed;
-    margin-left:200px;
+    /* position: fixed; */
+    /* margin-left:200px; */
     width:100px;
 }
 #logo2{
-    position: fixed;
-    margin-bottom:20px;
+    /* position: fixed; */
+    /* margin-bottom:20px; */
     height:60px;
     width:150px;
+}
+#menuBar{
+    background-color: lightgray;
 }
