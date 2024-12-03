@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
+import Table from 'react-bootstrap/Table';
 
 
 export default function Category(){
@@ -36,9 +37,26 @@ export default function Category(){
         <>
             <div>
                 <button><Link to='/main'>뒤로가기</Link></button>
-                {newList.map((each)=>
-                    <li>{each.상호명}</li>
-                )}
+                <Table striped>
+                        <thead>
+                            <tr>
+                            <th>#</th>
+                            <th>상호명</th>
+                            <th>주소</th>
+                            <th>영업시간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {newList.map((each)=>
+                                <tr>
+                                <td>#</td>
+                                <td>{each.상호명}</td>
+                                <td>{each.주소}</td>
+                                <td>{each.영업시간}</td>
+                                </tr>
+                            )}  
+                        </tbody>
+                    </Table>
             </div>
         </>
     );
