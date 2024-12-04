@@ -102,24 +102,25 @@ export default function Main(){
             <Row id="back"></Row>
             <Row id="menuBar">
                 <Col>
-                    <button><Link to='/category' state={"물회"}>물회</Link></button>
+                    <button id="button"><Link to='/category' state={"물회"} id="menu">물회</Link></button>
                 </Col>
                 <Col>
-                    <button><Link to='/category' state={"횟집"}>횟집</Link></button>
+                    <button id="button"><Link to='/category' state={"횟집"} id="menu">횟집</Link></button>
                 </Col>
                 <Col>
-                    <button><Link to='/category' state={"한식"}>한식</Link></button>
+                    <button id="button"><Link to='/category' state={"한식"} id="menu">한식</Link></button>
                 </Col>
                 <Col>
-                    <button><Link to='/category' state={"일식"}>일식</Link></button>
+                    <button id="button"><Link to='/category' state={"일식"} id="menu">일식</Link></button>
                 </Col>
                 <Col>
-                    <button><Link to='/category' state={"양식"}>양식</Link></button>
+                    <button id="button"><Link to='/category' state={"양식"} id="menu">양식</Link></button>
                 </Col>
                 <Col>
-                    <button><Link to='/category' state={"기타"}>기타</Link></button>
+                    <button id="button"><Link to='/category' state={"기타"} id="menu">기타</Link></button>
                 </Col>     
             </Row>
+            
             <Row className="cards">
                 <Col xs={1}></Col>
                 <Col xs={10}>

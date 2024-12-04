@@ -11,9 +11,11 @@
     width:600px;
 }
 #menuBar{
-    /* margin-top:100px; */
     background-color: lightgray;
     height:40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 #headerBar{
     position: fixed;
@@ -33,4 +35,16 @@
 }
 .cards{
     margin: 30px 0 30px 0;
+}
+#menu{
+    text-decoration-line: none;
+    color: black;
+    font-weight:bold;
+}
+#menu:hover{
+    color:gray;
+}
+#button{
+    border:none;
+    background-color: lightgray;
 }
