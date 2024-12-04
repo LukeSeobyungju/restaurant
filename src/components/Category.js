@@ -2,6 +2,9 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 export default function Category(){
@@ -35,29 +38,38 @@ export default function Category(){
 
     return (
         <>
-            <div>
+            <Row id="headerBar">
+                    <Col id="logos" xs={4}>
+                        <div class="top">
+                            <img src="into2_nb.png" id="logo" alt="logo"></img>
+                            <img src="into2_name.png" id="logo2" alt="logo"></img>
+                        </div>
+                    </Col>
+            </Row>
+            <Row id="back"></Row>
+            <Container>
                 <button><Link to='/main'>뒤로가기</Link></button>
                 <Table striped>
-                        <thead>
+                    <thead>
+                        <tr>
+                        <th>#</th>
+                        <th>상호명</th>
+                        <th>주소</th>
+                        <th>영업시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {newList.map((each)=>
                             <tr>
-                            <th>#</th>
-                            <th>상호명</th>
-                            <th>주소</th>
-                            <th>영업시간</th>
+                            <td>#</td>
+                            <td>{each.상호명}</td>
+                            <td>{each.주소}</td>
+                            <td>{each.영업시간}</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {newList.map((each)=>
-                                <tr>
-                                <td>#</td>
-                                <td>{each.상호명}</td>
-                                <td>{each.주소}</td>
-                                <td>{each.영업시간}</td>
-                                </tr>
-                            )}  
-                        </tbody>
-                    </Table>
-            </div>
+                        )}  
+                    </tbody>
+                </Table>
+            </Container>
         </>
     );
 }
