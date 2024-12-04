@@ -198,6 +198,7 @@ export default function Main(){
                         <Card.Body>
                             <Card.Title>{newList6.length>0 ? newList6[getRandom(newList6.length)].상호명:""}</Card.Title>
                             <Card.Text>
+                            <img src="기타.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
                             <Button variant="primary">자세히 보기</Button>
