@@ -26,6 +26,10 @@
 #back{
     height: 100px;
 }
+#backButton{
+    border:none;
+    background-color: white;
+}
 .top{
     float:right;
 }
@@ -47,4 +51,7 @@
 #button{
     border:none;
     background-color: lightgray;
+}
+#backicon{
+    color:black;
 }

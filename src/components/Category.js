@@ -5,6 +5,7 @@ import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { CgArrowLeft } from "react-icons/cg";
 
 
 export default function Category(){
@@ -48,7 +49,7 @@ export default function Category(){
             </Row>
             <Row id="back"></Row>
             <Container>
-                <button><Link to='/main'>뒤로가기</Link></button>
+                <button id="backButton"><Link to='/main'><CgArrowLeft id="backicon" size="30"/></Link></button>
                 <Table striped>
                     <thead>
                         <tr>
