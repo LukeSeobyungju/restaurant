@@ -120,45 +120,42 @@ export default function Main(){
                     <button id="button"><Link to='/category' state={"기타"} id="menu">기타</Link></button>
                 </Col>     
             </Row>
-            
+
             <Row className="cards">
-                <Col xs={1}></Col>
-                <Col xs={10}>
+                <Col xs={3}></Col>
+                <Col xs={3}>
                     <Card>
                         <Card.Header>#물회</Card.Header>
                         <Card.Body>
                             <Card.Title>{newList.length>0 ? newList[getRandom(newList.length)].상호명:""}</Card.Title>
                             <Card.Text>
+                                <img src="물회.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
                             <Button variant="primary">자세히 보기</Button>
                         </Card.Body>
                     </Card>
                 </Col>
-            </Row>
-            <Row className="cards">
-                <Col xs={1}></Col>
-                <Col xs={10}>
+                <Col xs={3}>
                     <Card>
                         <Card.Header>#횟집</Card.Header>
                         <Card.Body>
                             <Card.Title>{newList2.length>0 ? newList2[getRandom(newList2.length)].상호명:""}</Card.Title>
                             <Card.Text>
+                            <img src="횟집.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
                             <Button variant="primary">자세히 보기</Button>
                         </Card.Body>
                     </Card>
                 </Col>
-            </Row>
-            <Row className="cards">
-                <Col xs={1}></Col>
-                <Col xs={10}>
+                <Col xs={3}>
                     <Card>
                         <Card.Header>#한식</Card.Header>
                         <Card.Body>
                             <Card.Title>{newList3.length>0 ? newList3[getRandom(newList3.length)].상호명:""}</Card.Title>
                             <Card.Text>
+                            <img src="한식.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
                             <Button variant="primary">자세히 보기</Button>
@@ -167,38 +164,35 @@ export default function Main(){
                 </Col>
             </Row>
             <Row className="cards">
-                <Col xs={1}></Col>
-                <Col xs={10}>
+                <Col xs={3}></Col>
+                
+                <Col xs={3}>
                     <Card>
                         <Card.Header>#일식</Card.Header>
                         <Card.Body>
                             <Card.Title>{newList4.length>0 ? newList4[getRandom(newList4.length)].상호명:""}</Card.Title>
                             <Card.Text>
+                            <img src="일식.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
                             <Button variant="primary">자세히 보기</Button>
                         </Card.Body>
                     </Card>
                 </Col>
-            </Row>
-            <Row className="cards">
-                <Col xs={1}></Col>
-                <Col xs={10}>
+                <Col xs={3}>
                     <Card>
                         <Card.Header>#양식</Card.Header>
                         <Card.Body>
                             <Card.Title>{newList5.length>0 ? newList5[getRandom(newList5.length)].상호명:""}</Card.Title>
                             <Card.Text>
+                            <img src="양식.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
                             <Button variant="primary">자세히 보기</Button>
                         </Card.Body>
                     </Card>
                 </Col>
-            </Row>
-            <Row className="cards">
-                <Col xs={1}></Col>
-                <Col xs={10}>
+                <Col xs={3}>
                     <Card>
                         <Card.Header>#기타</Card.Header>
                         <Card.Body>
@@ -211,6 +205,7 @@ export default function Main(){
                     </Card>
                 </Col>
             </Row>
+                
         </Container>
                      
         </>
