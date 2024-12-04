@@ -17,7 +17,7 @@
 }
 #headerBar{
     position: fixed;
-    background-color: aqua;
+    background-color: white;
     z-index: 10;
     width: 100%;
 }
@@ -30,4 +30,7 @@
 #search_icon{
     padding: 0px;
     color: darkgray;
+}
+.cards{
+    margin: 30px 0 30px 0;
 }
