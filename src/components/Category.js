@@ -45,6 +45,9 @@ export default function Category(){
                             <img src="into2_nb.png" id="logo" alt="logo"></img>
                             <img src="into2_name.png" id="logo2" alt="logo"></img>
                         </div>
+                        <div>
+                            물회
+                        </div>
                     </Col>
             </Row>
             <Row id="back"></Row>

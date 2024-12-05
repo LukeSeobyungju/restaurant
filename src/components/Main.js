@@ -122,12 +122,18 @@ export default function Main(){
             </Row>
 
             <Row className="cards">
-                <Col xs={3}></Col>
+                <Col xs={3} id="reco">
+                    <Card>
+                      <Card.Header>*추천*</Card.Header>
+                        <Card.Title> 물회 - {newList.length>0 ? newList[getRandom(newList.length)].상호명:""}</Card.Title>
+                        <Card.Title> 횟집 - {newList2.length>0 ? newList2[getRandom(newList2.length)].상호명:""}</Card.Title>
+                        <Card.Title> 한식 - {newList3.length>0 ? newList3[getRandom(newList3.length)].상호명:""}</Card.Title>
+                    </Card>
+                </Col>
                 <Col xs={3}>
                     <Card>
                         <Card.Header>#물회</Card.Header>
                         <Card.Body>
-                            <Card.Title>{newList.length>0 ? newList[getRandom(newList.length)].상호명:""}</Card.Title>
                             <Card.Text>
                                 <img src="물회.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
@@ -140,7 +146,6 @@ export default function Main(){
                     <Card>
                         <Card.Header>#횟집</Card.Header>
                         <Card.Body>
-                            <Card.Title>{newList2.length>0 ? newList2[getRandom(newList2.length)].상호명:""}</Card.Title>
                             <Card.Text>
                             <img src="횟집.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
@@ -153,7 +158,6 @@ export default function Main(){
                     <Card>
                         <Card.Header>#한식</Card.Header>
                         <Card.Body>
-                            <Card.Title>{newList3.length>0 ? newList3[getRandom(newList3.length)].상호명:""}</Card.Title>
                             <Card.Text>
                             <img src="한식.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
