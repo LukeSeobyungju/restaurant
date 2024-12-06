@@ -11,7 +11,8 @@
     width:600px;
 }
 #menuBar{
-    background-color: lightgray;
+    background-color: #E5E5E5;
+    color:#7D7D7D;
     height:40px;
     justify-content: center;
     align-items: center;
@@ -40,9 +41,12 @@
 .cards{
     margin: 30px 0 30px 0;
 }
+#cardsh{
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
 #menu{
     text-decoration-line: none;
-    color: black;
+    color: #3D3D3D;
     font-weight:bold;
 }
 #menu:hover{
@@ -50,7 +54,7 @@
 }
 #button{
     border:none;
-    background-color: lightgray;
+    background-color: #E5E5E5;
 }
 #backicon{
     color:black;
@@ -63,7 +67,26 @@
     text-align: center;
 }
 #welcome{
-    background-color: rgb(46, 187, 180);
+    background-color: #095B85;
     text-align: center;
     padding: 30px;
+    color: white;
+}
+#more{
+    background-color:#E5E5E5;
+    text-decoration-line: none;
+    color: #3D3D3D;
+    border-color: #E5E5E5;
+    float: right;
+}
+#head{
+    padding: 10px;
+    padding-left:15px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #F2F2F2;
+    color:#3D3D3D;
+}
+#recos{
+    padding:10px;
 }
