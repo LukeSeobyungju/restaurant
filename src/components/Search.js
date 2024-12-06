@@ -1,6 +1,11 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
+import Table from 'react-bootstrap/Table';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { CgArrowLeft } from "react-icons/cg";
 
 export default function Search(){
     const [list,setList]=useState([]);
@@ -25,6 +30,16 @@ export default function Search(){
         setNewList(temp);
     }
 
+    const highlight=(text,keyword)=>{
+        const parts=text.split(keyword);
+        return parts.map((part,index)=>(
+            <span>
+                {part}
+                {index<parts.length-1&&<sapn style={{fontWeight:'bold'}}>{keyword}</sapn>}
+            </span>
+        ));
+    }
+
 
     useEffect(()=>{
         getNewList();
@@ -32,12 +47,43 @@ export default function Search(){
 
     return(
         <>
-            <div>
-                <button><Link to='/main'>뒤로가기</Link></button>
-                {newList.map((each)=>
-                    <li>{each.상호명}</li>
-                )}
-            </div>
+            <Row id="headerBar">
+                    <Col id="logos" xs={7}>
+                        <div class="top">
+                            <img src="into2_nb.png" id="logo" alt="logo"></img>
+                            <img src="into2_name.png" id="logo2" alt="logo"></img>
+                        </div>
+                    </Col>
+            </Row>
+            <Row id="back"></Row>
+            <Row>
+                
+            </Row>
+            <Container>
+                <button id="backButton"><Link to='/main'><CgArrowLeft id="backicon" size="30"/></Link></button>
+                <Table striped>
+                    <thead>
+                        <tr>
+                        <th>#</th>
+                        <th>상호명</th>
+                        <th>주소</th>
+                        <th>좌석수</th>
+                        <th>영업시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {newList.map((each,index)=>
+                            <tr>
+                            <td>{index+1}</td>
+                            <td>{highlight(each.상호명,keyword.state)}</td>
+                            <td>{each.주소}</td>
+                            <td>{each.좌석수}</td>
+                            <td>{each.영업시간}</td>
+                            </tr>
+                        )}
+                    </tbody>
+                </Table>
+            </Container>
         </>
     );
 }

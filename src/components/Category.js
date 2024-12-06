@@ -59,18 +59,20 @@ export default function Category(){
                         <th>#</th>
                         <th>상호명</th>
                         <th>주소</th>
+                        <th>좌석수</th>
                         <th>영업시간</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {newList.map((each)=>
+                        {newList.map((each,index)=>
                             <tr>
-                            <td>#</td>
+                            <td>{index+1}</td>
                             <td>{each.상호명}</td>
                             <td>{each.주소}</td>
+                            <td>{each.좌석수}</td>
                             <td>{each.영업시간}</td>
                             </tr>
-                        )}  
+                        )}
                     </tbody>
                 </Table>
             </Container>
