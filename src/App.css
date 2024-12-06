@@ -1,32 +1,36 @@
-#logo{
-    width:100px;
-}
-#logo2{
-    margin-top:5px;
-    height:60px;
-    width:100px;
-}
-#searchBox{
-    margin-top:32px;
-    width:600px;
-}
-#menuBar{
-    background-color: #E5E5E5;
-    color:#7D7D7D;
-    height:40px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-#headerBar{
-    position: fixed;
-    background-color: white;
-    z-index: 10;
-    width: 100%;
-}
-#back{
-    height: 100px;
-}
+/*상단고정바*/
+    #headerBar{
+        position: fixed;
+        background-color: white;
+        z-index: 10;
+        width: 100%;
+    }
+    #logo{
+        width:100px;
+    }/*로고*/
+    #logo2{
+        margin-top:5px;
+        height:60px;
+        width:100px;
+    }/*로고*/
+    #searchBox{
+        margin-top:32px;
+        width:600px;
+    }/*검색*/    
+
+/*메뉴바*/
+    #menuBar{
+        background-color: #E5E5E5;
+        color:#7D7D7D;
+        height:40px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }/*종류바*/
+    #back{
+        height: 100px;
+    }/*상단바 높이*/
+
 #backButton{
     border:none;
     background-color: white;
@@ -65,6 +69,7 @@
 }
 #reco{
     text-align: center;
+    align-items: center;
 }
 #welcome{
     background-color: #095B85;

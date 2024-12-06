@@ -130,17 +130,6 @@ export default function Main(bgcolor="gray"){
             </Row>
 
             <Row className="cards">
-                <Col xs={3} id="reco">
-                    <Card id="cardsh">
-                        <Card.Header id="head">*추천*</Card.Header>
-                        <Card.Title id="recos"> 물회 - {newList.length>0 ? newList[getRandom(newList.length)].상호명:""}</Card.Title>
-                        <Card.Title id="recos"> 횟집 - {newList2.length>0 ? newList2[getRandom(newList2.length)].상호명:""}</Card.Title>
-                        <Card.Title id="recos"> 한식 - {newList3.length>0 ? newList3[getRandom(newList3.length)].상호명:""}</Card.Title>
-                        <Card.Title id="recos"> 일식 - {newList3.length>0 ? newList4[getRandom(newList4.length)].상호명:""}</Card.Title>
-                        <Card.Title id="recos"> 양식 - {newList3.length>0 ? newList5[getRandom(newList5.length)].상호명:""}</Card.Title>
-                        <Card.Title id="recos"> 기타 - {newList3.length>0 ? newList6[getRandom(newList6.length)].상호명:""}</Card.Title>
-                    </Card>
-                </Col>
                 <Col xs={3}>
                     <Card id="cardsh">
                         <Card.Header id="head">#물회</Card.Header>
@@ -174,10 +163,20 @@ export default function Main(bgcolor="gray"){
                         </Card.Body>
                     </Card>
                 </Col>
+                <Col xs={3} id="reco">
+                    <Card id="cardsh">
+                        <Card.Header id="head">*추천*</Card.Header>
+                        <Card.Title id="recos"> 물회 - {newList.length>0 ? newList[getRandom(newList.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 횟집 - {newList2.length>0 ? newList2[getRandom(newList2.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 한식 - {newList3.length>0 ? newList3[getRandom(newList3.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 일식 - {newList3.length>0 ? newList4[getRandom(newList4.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 양식 - {newList3.length>0 ? newList5[getRandom(newList5.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 기타 - {newList3.length>0 ? newList6[getRandom(newList6.length)].상호명:""}</Card.Title>
+                    </Card>
+                </Col>
             </Row>
+            
             <Row className="cards">
-                <Col xs={3}></Col>
-                
                 <Col xs={3}>
                     <Card id="cardsh">
                         <Card.Header id="head">#일식</Card.Header>
