@@ -10,7 +10,7 @@ import Card from 'react-bootstrap/Card';
 import {FaSearch} from "react-icons/fa";
 import axios from "axios";
 
-export default function Main(){
+export default function Main(bgcolor="gray"){
     
     //검색창 입력 값 저장
     const [value,setValue]=useState('');
@@ -131,49 +131,46 @@ export default function Main(){
 
             <Row className="cards">
                 <Col xs={3} id="reco">
-                    <Card>
-                      <Card.Header>*추천*</Card.Header>
-                        <Card.Title> 물회 - {newList.length>0 ? newList[getRandom(newList.length)].상호명:""}</Card.Title>
-                        <Card.Title> 횟집 - {newList2.length>0 ? newList2[getRandom(newList2.length)].상호명:""}</Card.Title>
-                        <Card.Title> 한식 - {newList3.length>0 ? newList3[getRandom(newList3.length)].상호명:""}</Card.Title>
-                        <Card.Title> 일식 - {newList3.length>0 ? newList4[getRandom(newList4.length)].상호명:""}</Card.Title>
-                        <Card.Title> 양식 - {newList3.length>0 ? newList5[getRandom(newList5.length)].상호명:""}</Card.Title>
-                        <Card.Title> 기타 - {newList3.length>0 ? newList6[getRandom(newList6.length)].상호명:""}</Card.Title>
+                    <Card id="cardsh">
+                        <Card.Header id="head">*추천*</Card.Header>
+                        <Card.Title id="recos"> 물회 - {newList.length>0 ? newList[getRandom(newList.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 횟집 - {newList2.length>0 ? newList2[getRandom(newList2.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 한식 - {newList3.length>0 ? newList3[getRandom(newList3.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 일식 - {newList3.length>0 ? newList4[getRandom(newList4.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 양식 - {newList3.length>0 ? newList5[getRandom(newList5.length)].상호명:""}</Card.Title>
+                        <Card.Title id="recos"> 기타 - {newList3.length>0 ? newList6[getRandom(newList6.length)].상호명:""}</Card.Title>
                     </Card>
                 </Col>
                 <Col xs={3}>
-                    <Card>
-                        <Card.Header>#물회</Card.Header>
+                    <Card id="cardsh">
+                        <Card.Header id="head">#물회</Card.Header>
                         <Card.Body>
                             <Card.Text>
                                 <img src="물회.jpg" id="사진"></img>
-                            With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button><Link to='/category' state={"물회"} id="menu">자세히 보기</Link></Button>
+                            <Button id="more"><Link to='/category' state={"물회"} id="more">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col xs={3}>
-                    <Card>
-                        <Card.Header>#횟집</Card.Header>
+                    <Card id="cardsh">
+                        <Card.Header id="head">#횟집</Card.Header>
                         <Card.Body>
                             <Card.Text>
                             <img src="횟집.jpg" id="사진"></img>
-                            With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button><Link to='/category' state={"횟집"} id="menu">자세히 보기</Link></Button>
+                            <Button id="more"><Link to='/category' state={"횟집"} id="more">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col xs={3}>
-                    <Card>
-                        <Card.Header>#한식</Card.Header>
+                    <Card id="cardsh">
+                        <Card.Header id="head">#한식</Card.Header>
                         <Card.Body>
                             <Card.Text>
                             <img src="한식.jpg" id="사진"></img>
-                            With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button><Link to='/category' state={"한식"} id="menu">자세히 보기</Link></Button>
+                            <Button id="more"><Link to='/category' state={"한식"} id="more">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -182,38 +179,35 @@ export default function Main(){
                 <Col xs={3}></Col>
                 
                 <Col xs={3}>
-                    <Card>
-                        <Card.Header>#일식</Card.Header>
+                    <Card id="cardsh">
+                        <Card.Header id="head">#일식</Card.Header>
                         <Card.Body>
                             <Card.Text>
                             <img src="일식.jpg" id="사진"></img>
-                            With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button><Link to='/category' state={"일식"} id="menu">자세히 보기</Link></Button>
+                            <Button id="more"><Link to='/category' state={"일식"} id="more">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col xs={3}>
-                    <Card>
-                        <Card.Header>#양식</Card.Header>
+                    <Card id="cardsh">
+                        <Card.Header id="head">#양식</Card.Header>
                         <Card.Body>
                             <Card.Text>
                             <img src="양식.jpg" id="사진"></img>
-                            With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button><Link to='/category' state={"양식"} id="menu">자세히 보기</Link></Button>
+                            <Button id="more"><Link to='/category' state={"양식"} id="more">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col xs={3}>
-                    <Card>
-                        <Card.Header>#기타</Card.Header>
+                    <Card id="cardsh">
+                        <Card.Header id="head">#기타</Card.Header>
                         <Card.Body>
                             <Card.Text>
                             <img src="기타.jpg" id="사진"></img>
-                            With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button><Link to='/category' state={"기타"} id="menu">자세히 보기</Link></Button>
+                            <Button id="more"><Link to='/category' state={"기타"} id="more">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
