@@ -40,17 +40,17 @@ export default function Category(){
     return (
         <>
             <Row id="headerBar">
-                    <Col id="logos" xs={4}>
+                    <Col id="logos" xs={7}>
                         <div class="top">
                             <img src="into2_nb.png" id="logo" alt="logo"></img>
                             <img src="into2_name.png" id="logo2" alt="logo"></img>
                         </div>
-                        <div>
-                            물회
-                        </div>
                     </Col>
             </Row>
             <Row id="back"></Row>
+            <Row>
+                
+            </Row>
             <Container>
                 <button id="backButton"><Link to='/main'><CgArrowLeft id="backicon" size="30"/></Link></button>
                 <Table striped>

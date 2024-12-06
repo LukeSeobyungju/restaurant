@@ -29,10 +29,7 @@ export default function Main(){
         .catch((error)=>{
             console.log(error);
         })
-    }
-    useEffect(()=>{
-        getData();
-    },[]);
+    }    
 
     const[newList,setNewList]=useState([]);
     function getNewList(){
@@ -64,7 +61,16 @@ export default function Main(){
         const temp=list.filter(each=>each.분류==="기타");
         setNewList6(temp);
     }
-    
+
+    function getRandom(length){
+        return parseInt(Math.random()*length);
+    }
+
+
+    useEffect(()=>{
+        getData();
+    },[]);
+
     useEffect(()=>{
         getNewList();
         getNewList2();
@@ -75,9 +81,7 @@ export default function Main(){
 
     },[list]);
 
-    function getRandom(length){
-        return parseInt(Math.random()*length);
-    }
+    
     
     
     return(
@@ -120,6 +124,10 @@ export default function Main(){
                     <button id="button"><Link to='/category' state={"기타"} id="menu">기타</Link></button>
                 </Col>     
             </Row>
+            <Row id="welcome">
+                <h2>당신을 위한</h2>
+                <h1><strong>포항</strong> 추천 맛집</h1>
+            </Row>
 
             <Row className="cards">
                 <Col xs={3} id="reco">
@@ -128,6 +136,9 @@ export default function Main(){
                         <Card.Title> 물회 - {newList.length>0 ? newList[getRandom(newList.length)].상호명:""}</Card.Title>
                         <Card.Title> 횟집 - {newList2.length>0 ? newList2[getRandom(newList2.length)].상호명:""}</Card.Title>
                         <Card.Title> 한식 - {newList3.length>0 ? newList3[getRandom(newList3.length)].상호명:""}</Card.Title>
+                        <Card.Title> 일식 - {newList3.length>0 ? newList4[getRandom(newList4.length)].상호명:""}</Card.Title>
+                        <Card.Title> 양식 - {newList3.length>0 ? newList5[getRandom(newList5.length)].상호명:""}</Card.Title>
+                        <Card.Title> 기타 - {newList3.length>0 ? newList6[getRandom(newList6.length)].상호명:""}</Card.Title>
                     </Card>
                 </Col>
                 <Col xs={3}>
@@ -138,7 +149,7 @@ export default function Main(){
                                 <img src="물회.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button variant="primary">자세히 보기</Button>
+                            <Button><Link to='/category' state={"물회"} id="menu">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -150,7 +161,7 @@ export default function Main(){
                             <img src="횟집.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button variant="primary">자세히 보기</Button>
+                            <Button><Link to='/category' state={"횟집"} id="menu">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -162,7 +173,7 @@ export default function Main(){
                             <img src="한식.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button variant="primary">자세히 보기</Button>
+                            <Button><Link to='/category' state={"한식"} id="menu">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -174,12 +185,11 @@ export default function Main(){
                     <Card>
                         <Card.Header>#일식</Card.Header>
                         <Card.Body>
-                            <Card.Title>{newList4.length>0 ? newList4[getRandom(newList4.length)].상호명:""}</Card.Title>
                             <Card.Text>
                             <img src="일식.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button variant="primary">자세히 보기</Button>
+                            <Button><Link to='/category' state={"일식"} id="menu">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -187,12 +197,11 @@ export default function Main(){
                     <Card>
                         <Card.Header>#양식</Card.Header>
                         <Card.Body>
-                            <Card.Title>{newList5.length>0 ? newList5[getRandom(newList5.length)].상호명:""}</Card.Title>
                             <Card.Text>
                             <img src="양식.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button variant="primary">자세히 보기</Button>
+                            <Button><Link to='/category' state={"양식"} id="menu">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -200,12 +209,11 @@ export default function Main(){
                     <Card>
                         <Card.Header>#기타</Card.Header>
                         <Card.Body>
-                            <Card.Title>{newList6.length>0 ? newList6[getRandom(newList6.length)].상호명:""}</Card.Title>
                             <Card.Text>
                             <img src="기타.jpg" id="사진"></img>
                             With supporting text below as a natural lead-in to additional content.
                             </Card.Text>
-                            <Button variant="primary">자세히 보기</Button>
+                            <Button><Link to='/category' state={"기타"} id="menu">자세히 보기</Link></Button>
                         </Card.Body>
                     </Card>
                 </Col>

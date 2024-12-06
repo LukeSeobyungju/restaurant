@@ -62,3 +62,8 @@
 #reco{
     text-align: center;
 }
+#welcome{
+    background-color: rgb(46, 187, 180);
+    text-align: center;
+    padding: 30px;
+}
