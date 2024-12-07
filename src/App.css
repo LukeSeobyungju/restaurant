@@ -95,3 +95,8 @@
 #recos{
     padding:10px;
 }
+#book{
+    border:none;
+    background-color: #E5E5E5;
+    margin-top:40px;
+}

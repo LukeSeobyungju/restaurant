@@ -135,6 +135,11 @@ export default function Main(bgcolor = "gray") {
                             </Button>
                         </InputGroup>
                     </Col>
+                    <Col id="reco">
+                        <Col>
+                            <button id="book"><Link to='/bookmark' id="menu">*즐겨찾기*</Link></button>
+                        </Col>
+                    </Col>
                 </Row>
                 <Row id="back"></Row>
                 <Row id="menuBar">
