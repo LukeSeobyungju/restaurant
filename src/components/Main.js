@@ -277,20 +277,22 @@ export default function Main() {
                         <p><strong>주소:</strong> {selectedRestaurant.주소}</p>
                         <p><strong>좌석수:</strong> {selectedRestaurant.좌석수}</p>
                         <p><strong>영업시간:</strong> {selectedRestaurant.영업시간}</p>
-                        <Button
+                        
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button 
                             variant="danger"
                             onClick={() => handleUnbookmark(selectedRestaurant)}
                             style={{
                                 backgroundColor: 'white',
                                 color: 'black',
                                 border: 'none',
-                                padding: '5px'
+                                padding: '5px',
+                                margin: '0 375px 0 0'
                             }}
                         >
                             <FaStar style={{ color: 'black' }} /> {/* 검정색 별 아이콘 */}
                         </Button>
-                    </Modal.Body>
-                    <Modal.Footer>
                         <Button variant="secondary" onClick={handleCloseModal}>
                             Close
                         </Button>
