@@ -130,7 +130,7 @@ export default function Main(bgcolor="gray"){
             </Row>
 
             <Row className="cards">
-                <Col xs={3}>
+                <Col xs={3} style={{ margin: '0 5px 0 50px' }}>
                     <Card id="cardsh">
                         <Card.Header id="head">#물회</Card.Header>
                         <Card.Body>
@@ -163,7 +163,7 @@ export default function Main(bgcolor="gray"){
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xs={3} id="reco">
+                <Col xs={2} id="reco"  style={{ margin: '0 0 0 30px' }}>
                     <Card id="cardsh">
                         <Card.Header id="head">*추천*</Card.Header>
                         <Card.Title id="recos"> 물회 - {newList.length>0 ? newList[getRandom(newList.length)].상호명:""}</Card.Title>
@@ -177,7 +177,7 @@ export default function Main(bgcolor="gray"){
             </Row>
             
             <Row className="cards">
-                <Col xs={3}>
+                <Col xs={3} style={{ margin: '0 5px 0 50px' }}>
                     <Card id="cardsh">
                         <Card.Header id="head">#일식</Card.Header>
                         <Card.Body>
