@@ -9,6 +9,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Card from 'react-bootstrap/Card';
 import { FaSearch } from "react-icons/fa";
 import axios from "axios";
+import { MdOutlineSentimentVeryDissatisfied } from "react-icons/md";
+import { CardTitle } from "react-bootstrap";
 
 export default function Main(bgcolor = "gray") {
 
@@ -104,6 +106,16 @@ export default function Main(bgcolor = "gray") {
             });
         }
     }, [newList, newList2, newList3, newList4, newList5, newList6]);
+
+
+    const[myList,setMyList]=useState([]);
+    function getMyList(){
+        const temp=list.filter(each=>each.star===true);
+        setMyList(temp);
+    }
+    useEffect(()=>{
+        getMyList();
+    },[list]);
 
     return (
         <>
@@ -229,6 +241,12 @@ export default function Main(bgcolor = "gray") {
                                 </Card.Text>
                                 <Button id="more"><Link to='/category' state={"기타"} id="more">자세히 보기</Link></Button>
                             </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col xs={2} id="reco" style={{ margin: '0 0 0 30px' }}>
+                        <Card id="cardsh">
+                            <Card.Header id="head">*즐겨찾기*</Card.Header>
+                            <CardTitle id="recos">{myList.map((each)=><li>{each.상호명}</li>)}</CardTitle>
                         </Card>
                     </Col>
                 </Row>

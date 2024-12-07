@@ -7,6 +7,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { CgArrowLeft } from "react-icons/cg";
 import {FaStar} from "react-icons/fa";
+import { CiStar } from "react-icons/ci";
+
 
 
 export default function Category(){
@@ -31,13 +33,32 @@ export default function Category(){
         const temp=list.filter(each=>each.분류===category.state);
         setNewList(temp);
     }
-
-
     useEffect(()=>{
         getNewList();
     },[list,category.state]);
 
 
+    function check(each){
+        //const[user,setUser]=useState([]);
+        fetch(API.concat("/"+each.id),{
+            method:"PUT",
+            headers:{"Content-Type":"application/json"},
+            body: JSON.stringify({
+                ...each,
+                star: !each.star,
+            }),
+        })
+        .then((response)=>{
+            if(response.ok){
+                setNewList((prev) =>
+                    prev.map((item) =>
+                        item.id === each.id ? { ...item, star: !each.star } : item
+                    )
+                );
+            }
+        })
+        .catch((error) => console.error(error));
+    };
     return (
         <>
             <Row id="headerBar">
@@ -73,7 +94,7 @@ export default function Category(){
                             <td>{each.주소}</td>
                             <td>{each.좌석수}</td>
                             <td>{each.영업시간}</td>
-                            <td><FaStar/></td>
+                            {each.star?<td><FaStar onClick={() => check(each)}/></td>:<td><CiStar onClick={() => check(each)}/></td>}
                             </tr>
                         )}
                     </tbody>
