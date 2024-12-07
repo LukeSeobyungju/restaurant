@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Card from 'react-bootstrap/Card';
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaStar } from "react-icons/fa"; // FaStar import 추가
 import axios from "axios";
 import { Modal } from "react-bootstrap"; // Modal import
 
@@ -59,7 +59,7 @@ export default function Main() {
         setMyList(temp);
     };
 
-    // 랜덤 추천 식당을 설정하는 함수
+    // 랜덤 추천을 설정하는 함수
     const getRandom = (length) => {
         return parseInt(Math.random() * length);
     };
@@ -92,6 +92,21 @@ export default function Main() {
             });
         }
     }, [newList, newList2, newList3, newList4, newList5, newList6]);
+
+    // 찜 취소 처리
+    const handleUnbookmark = (restaurant) => {
+        // API로 찜 취소 요청 보내기
+        axios.put(`${API}/${restaurant.id}`, { ...restaurant, star: false })
+            .then(response => {
+                // 찜 취소 후 즐겨찾기 목록 업데이트
+                // 목록에서 해당 식당을 제거
+                setMyList(prevList => prevList.filter(item => item.id !== restaurant.id));
+                setShowModal(false); // 모달 닫기
+            })
+            .catch(error => {
+                console.log("찜 취소 실패:", error);
+            });
+    };
 
     // 모달 표시
     const handleShowModal = (restaurant) => {
@@ -262,6 +277,18 @@ export default function Main() {
                         <p><strong>주소:</strong> {selectedRestaurant.주소}</p>
                         <p><strong>좌석수:</strong> {selectedRestaurant.좌석수}</p>
                         <p><strong>영업시간:</strong> {selectedRestaurant.영업시간}</p>
+                        <Button
+                            variant="danger"
+                            onClick={() => handleUnbookmark(selectedRestaurant)}
+                            style={{
+                                backgroundColor: 'white',
+                                color: 'black',
+                                border: 'none',
+                                padding: '5px'
+                            }}
+                        >
+                            <FaStar style={{ color: 'black' }} /> {/* 검정색 별 아이콘 */}
+                        </Button>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleCloseModal}>
