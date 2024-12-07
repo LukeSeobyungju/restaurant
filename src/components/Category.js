@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { CgArrowLeft } from "react-icons/cg";
+import {FaStar} from "react-icons/fa";
 
 
 export default function Category(){
@@ -61,6 +62,7 @@ export default function Category(){
                         <th>주소</th>
                         <th>좌석수</th>
                         <th>영업시간</th>
+                        <th>찜</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,6 +73,7 @@ export default function Category(){
                             <td>{each.주소}</td>
                             <td>{each.좌석수}</td>
                             <td>{each.영업시간}</td>
+                            <td><FaStar/></td>
                             </tr>
                         )}
                     </tbody>
