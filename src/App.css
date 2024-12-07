@@ -53,10 +53,10 @@
 .cards{
     margin: 30px 0 30px 0px;
 }
-#cardsh{
+.cardsh{
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
 }/*그림자*/
-#button{
+.button{
     border:none;
     background-color: #E5E5E5;
 }
@@ -64,12 +64,8 @@
     color:black;
 }
 #사진{
-    width:320px;
-    height:320px;
-}
-#reco{
-    text-align: center;
-    align-items: center;
+    width:100%;
+    aspect-ratio: 1;
 }
 #welcome{
     background-color: #095B85;
@@ -81,10 +77,11 @@
     background-color:#E5E5E5;
     text-decoration-line: none;
     color: #3D3D3D;
-    border-color: #E5E5E5;
+    border: 0;
     float: right;
 }
-#head{
+
+.head{
     padding: 10px;
     padding-left:15px;
     font-size: 20px;
@@ -99,4 +96,9 @@
     border:none;
     background-color: #E5E5E5;
     margin-top:40px;
+}
+#footer{
+    text-align: center;
+    margin: 100px 0 50px 0;
+    color: gray;
 }

@@ -100,7 +100,7 @@ export default function Search(){
                         {newList.map((each,index)=>
                             <tr>
                             <td>{index+1}</td>
-                            <td>{highlight(each.상호명,keyword.state)}</td>
+                            <td><Link to='/detail' state={each.상호명} style={{textDecoration:'none', color:'black'}}>{highlight(each.상호명,keyword.state)}</Link></td>
                             <td>{each.주소}</td>
                             <td>{each.좌석수}</td>
                             <td>{each.영업시간}</td>

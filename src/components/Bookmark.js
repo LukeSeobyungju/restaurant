@@ -88,7 +88,7 @@ export default function Bookmark() {
                         {newList.map((each, index) =>
                             <tr key={each.id}>
                                 <td>{index + 1}</td>
-                                <td>{each.상호명}</td>
+                                <td><Link to='/detail' state={each.상호명} style={{textDecoration:'none', color:'black'}}>{each.상호명}</Link></td>
                                 <td>{each.주소}</td>
                                 <td>{each.좌석수}</td>
                                 <td>{each.영업시간}</td>

@@ -39,7 +39,6 @@ export default function Category(){
 
 
     function check(each){
-        //const[user,setUser]=useState([]);
         fetch(API.concat("/"+each.id),{
             method:"PUT",
             headers:{"Content-Type":"application/json"},
@@ -90,7 +89,7 @@ export default function Category(){
                         {newList.map((each,index)=>
                             <tr>
                             <td>{index+1}</td>
-                            <td>{each.상호명}</td>
+                            <td><Link to='/detail' state={each.상호명} style={{textDecoration:'none', color:'black'}}>{each.상호명}</Link></td>
                             <td>{each.주소}</td>
                             <td>{each.좌석수}</td>
                             <td>{each.영업시간}</td>
