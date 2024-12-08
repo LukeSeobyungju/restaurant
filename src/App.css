@@ -89,6 +89,15 @@
     background: #F2F2F2;
     color:#3D3D3D;
 }
+.head2{
+    padding: 10px;
+    padding-left:15px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #F2F2F2;
+    color:#3D3D3D;
+    text-align: center;
+}
 #recos{
     padding:10px;
 }

@@ -211,7 +211,7 @@ export default function Main() {
                     <Row>
                         <Col style={{ margin: '30px 10px 0 30px' }}>
                             <Card className="cardsh">
-                                <Card.Header className="head"><button onClick={()=>navigate('/bookmark')} style={{border:0,fontWeight:'bold',color:'#3D3D3D'}}>*즐겨찾기*</button></Card.Header>
+                                <Card.Header className="head2"><button onClick={()=>navigate('/bookmark')} style={{border:0,fontWeight:'bold',color:'#3D3D3D'}}>*즐겨찾기*</button></Card.Header>
                                 <Card.Body>
                                     {myList.length > 0 ? myList.map((each) => (
                                         <li
@@ -229,7 +229,7 @@ export default function Main() {
                     <Row>
                         <Col style={{ margin: '0px 10px 0 30px' }}>
                             <Card className="cardsh">
-                                <Card.Header className="head"><button onClick={()=>navigate('/detail',{state:ran.상호명})} style={{border:0,fontWeight:'bold',color:'#3D3D3D'}}>*랜덤추천*</button></Card.Header>
+                                <Card.Header className="head2"><button onClick={()=>navigate('/detail',{state:ran.상호명})} style={{border:0,fontWeight:'bold',color:'#3D3D3D'}}>*랜덤추천*</button></Card.Header>
                                 <Card.Body id="recos"> {ran?
                                 `${ran.상호명}\n${ran.영업시간}\n${ran.주소}\n${ran.메뉴}`.split('\n').map((each)=>(<p>{each}</p>))
                                 :0}</Card.Body>
