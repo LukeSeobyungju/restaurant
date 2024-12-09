@@ -111,3 +111,15 @@
     margin: 100px 0 50px 0;
     color: gray;
 }
+#crud{
+    width:130px;
+    margin:100px 0 0 30px;
+    border-radius: 5px;
+    border:0;
+    background-color: lightgray;
+    padding: 10px;
+}
+#scroll{
+    text-align: center;
+    margin: 120px 0 0 300px;
+}

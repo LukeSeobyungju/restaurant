@@ -10,6 +10,8 @@ import Card from 'react-bootstrap/Card';
 import { FaSearch, FaStar } from "react-icons/fa"; // FaStar import 추가
 import axios from "axios";
 import { Modal } from "react-bootstrap"; // Modal import
+import { FaArrowCircleUp } from "react-icons/fa";
+
 
 export default function Main() {
     const [value, setValue] = useState('');
@@ -239,10 +241,15 @@ export default function Main() {
                 </Col>
             </Row>
             <Row>
-                <Col id="footer">
-                    
+                <Col xs={4}>
+                    <button onClick={()=>{navigate('/crud')}} id="crud">정보 수정 요청</button>
+                </Col>
+                <Col id="footer" xs={4}>
                     made by seolck_ & <br/> 
                     2024-2 oss final
+                </Col>
+                <Col xs={4}>
+                    <FaArrowCircleUp onClick={()=>window.scrollTo(0,0)} id="scroll"/>
                 </Col>
             </Row>
             
