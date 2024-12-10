@@ -120,6 +120,6 @@
     padding: 10px;
 }
 #scroll{
-    text-align: center;
-    margin: 120px 0 0 300px;
+    float: right;
+    margin: 120px 90px 0 0;
 }
