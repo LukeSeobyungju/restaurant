@@ -9,7 +9,9 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Card from 'react-bootstrap/Card';
 import { FaSearch, FaStar } from "react-icons/fa"; 
 import axios from "axios";
-import { Modal } from "react-bootstrap"; 
+import { Modal } from "react-bootstrap"; // Modal import
+import { FaArrowCircleUp } from "react-icons/fa";
+
 
 export default function Main() {
     const [value, setValue] = useState('');
@@ -200,7 +202,7 @@ export default function Main() {
                     <Row>
                         <Col style={{ margin: '30px 10px 0 30px' }}>
                             <Card className="cardsh">
-                                <Card.Header className="head"><button onClick={()=>navigate('/bookmark')} style={{border:0,fontWeight:'bold',color:'#3D3D3D'}}>*즐겨찾기*</button></Card.Header>
+                                <Card.Header className="head2"><button onClick={()=>navigate('/bookmark')} style={{border:0,fontWeight:'bold',color:'#3D3D3D'}}>*즐겨찾기*</button></Card.Header>
                                 <Card.Body>
                                     {myList.length > 0 ? myList.map((each) => (
                                         <li
@@ -218,7 +220,7 @@ export default function Main() {
                     <Row>
                         <Col style={{ margin: '0px 10px 0 30px' }}>
                             <Card className="cardsh">
-                                <Card.Header className="head"><button onClick={()=>navigate('/detail',{state:ran.상호명})} style={{border:0,fontWeight:'bold',color:'#3D3D3D'}}>*랜덤추천*</button></Card.Header>
+                                <Card.Header className="head2"><button onClick={()=>navigate('/detail',{state:ran.상호명})} style={{border:0,fontWeight:'bold',color:'#3D3D3D'}}>*랜덤추천*</button></Card.Header>
                                 <Card.Body id="recos"> {ran?
                                 `${ran.상호명}\n${ran.영업시간}\n${ran.주소}\n${ran.메뉴}`.split('\n').map((each)=>(<p>{each}</p>))
                                 :0}</Card.Body>
@@ -228,9 +230,15 @@ export default function Main() {
                 </Col>
             </Row>
             <Row>
-                <Col id="footer">
-                    made by seolck_ & d0rit0ss<br/> 
+                <Col xs={4}>
+                    <button onClick={()=>{navigate('/crud')}} id="crud">정보 수정 요청</button>
+                </Col>
+                <Col id="footer" xs={4}>
+                    made by seolck_ & D0rit0ss<br/> 
                     2024-2 oss final
+                </Col>
+                <Col xs={4}>
+                    <FaArrowCircleUp onClick={()=>window.scrollTo(0,0)} id="scroll"/>
                 </Col>
             </Row>
         </Container>

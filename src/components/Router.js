@@ -4,6 +4,7 @@ import Main from "./Main";
 import Search from "./Search";
 import Bookmark from "./Bookmark";
 import Detail from "./Detail";
+import CRUD from "./CRUD";
 
 export default function Router(){
     return(
@@ -16,6 +17,7 @@ export default function Router(){
                     <Route path="/search" element={<Search/>} />
                     <Route path="/bookmark" element={<Bookmark/>} />
                     <Route path="/detail" element={<Detail/>} />
+                    <Route path="/crud" element={<CRUD/>} />
                 </Routes>
             </BrowserRouter>
         </>

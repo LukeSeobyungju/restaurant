@@ -89,6 +89,15 @@
     background: #F2F2F2;
     color:#3D3D3D;
 }
+.head2{
+    padding: 10px;
+    padding-left:15px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #F2F2F2;
+    color:#3D3D3D;
+    text-align: center;
+}
 #recos{
     padding:10px;
 }
@@ -101,4 +110,16 @@
     text-align: center;
     margin: 100px 0 50px 0;
     color: gray;
+}
+#crud{
+    width:130px;
+    margin:100px 0 0 30px;
+    border-radius: 5px;
+    border:0;
+    background-color: lightgray;
+    padding: 10px;
+}
+#scroll{
+    float: right;
+    margin: 120px 90px 0 0;
 }
