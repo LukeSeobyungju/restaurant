@@ -7,24 +7,21 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Card from 'react-bootstrap/Card';
-import { FaSearch, FaStar } from "react-icons/fa"; // FaStar import 추가
+import { FaSearch, FaStar } from "react-icons/fa"; 
 import axios from "axios";
-import { Modal } from "react-bootstrap"; // Modal import
+import { Modal } from "react-bootstrap"; 
 
 export default function Main() {
     const [value, setValue] = useState('');
     const [list, setList] = useState([]);
     const [myList, setMyList] = useState([]);
-    const [selectedRestaurant, setSelectedRestaurant] = useState(null); // 선택된 식당
-    const [showModal, setShowModal] = useState(false); // 모달 표시 여부
+    const [selectedRestaurant, setSelectedRestaurant] = useState(null); 
+    const [showModal, setShowModal] = useState(false); 
 
-
-    // 검색창 입력 값 저장
     const onchange = (e) => {
         setValue(e.target.value);
     };
 
-    // API에서 데이터 가져오기
     const API = "https://6728190f270bd0b97554559c.mockapi.io/my_data/restaurant";
     const getData = () => {
         axios.get(API)
@@ -36,13 +33,11 @@ export default function Main() {
             });
     };
 
-    // 즐겨찾기 목록 가져오기
     const getMyList = () => {
         const temp = list.filter(each => each.star === true);
         setMyList(temp);
     };
 
-    // 랜덤 추천을 설정하는 함수
     const getRandom = (length) => {
         return parseInt(Math.random() * length);
     };
@@ -52,31 +47,25 @@ export default function Main() {
     }, []);
 
     useEffect(() => {
-        getMyList(); // 데이터가 로드된 후 즐겨찾기 목록 설정
+        getMyList();
     }, [list]);
     
     const [ran,setRan]=useState();
-    // 랜덤 추천을 설정
     useEffect(() => {
         if(list.length>0) setRan(list[getRandom(list.length)]);
     }, [list]);
 
-    // 찜 취소 처리
     const handleUnbookmark = (restaurant) => {
-        // API로 찜 취소 요청 보내기
         axios.put(`${API}/${restaurant.id}`, { ...restaurant, star: false })
             .then(response => {
-                // 찜 취소 후 즐겨찾기 목록 업데이트
-                // 목록에서 해당 식당을 제거
                 setMyList(prevList => prevList.filter(item => item.id !== restaurant.id));
-                setShowModal(false); // 모달 닫기
+                setShowModal(false); 
             })
             .catch(error => {
                 console.log("찜 취소 실패:", error);
             });
     };
 
-    // 모달 표시
     const handleShowModal = (restaurant) => {
         setSelectedRestaurant(restaurant);
         setShowModal(true);
@@ -84,7 +73,7 @@ export default function Main() {
 
     const handleCloseModal = () => {
         setShowModal(false);
-        setSelectedRestaurant(null); // 모달 닫을 때 selectedRestaurant 초기화
+        setSelectedRestaurant(null); 
     };
 
     const navigate=useNavigate();
@@ -216,7 +205,7 @@ export default function Main() {
                                     {myList.length > 0 ? myList.map((each) => (
                                         <li
                                             key={each.id}
-                                            onClick={() => handleShowModal(each)} // 상호명 클릭 시 팝업 열기
+                                            onClick={() => handleShowModal(each)} 
                                             style={{ cursor: 'pointer' }}
                                         >
                                             {each.상호명}
@@ -240,16 +229,12 @@ export default function Main() {
             </Row>
             <Row>
                 <Col id="footer">
-                    
-                    made by seolck_ & <br/> 
+                    made by seolck_ & d0rit0ss<br/> 
                     2024-2 oss final
                 </Col>
             </Row>
-            
         </Container>
 
-
-        {/* 팝업 모달 */}
         {selectedRestaurant && (
             <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
@@ -259,7 +244,6 @@ export default function Main() {
                     <p><strong>주소:</strong> {selectedRestaurant.주소}</p>
                     <p><strong>좌석수:</strong> {selectedRestaurant.좌석수}</p>
                     <p><strong>영업시간:</strong> {selectedRestaurant.영업시간}</p>
-                    
                 </Modal.Body>
                 <Modal.Footer>
                 <Button 
@@ -273,7 +257,7 @@ export default function Main() {
                             margin: '0 375px 0 0'
                         }}
                     >
-                        <FaStar style={{ color: 'black' }} /> {/* 검정색 별 아이콘 */}
+                        <FaStar style={{ color: 'black' }} />
                     </Button>
                     <Button variant="secondary" onClick={handleCloseModal}>
                         Close
